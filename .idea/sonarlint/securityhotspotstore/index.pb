@@ -35,3 +35,5 @@ o
 ?demo/src/main/java/com/example/demo/service/UserServiceImp.java,b\5\b54b8385cf7186a2085144d31a5851cb07a3dff8
 x
 Hdemo/src/main/java/com/example/demo/service/CustomUserDetailService.java,d\b\db598c9261d3303eab3995a7dc667ff106271692
+?
+demo/.gitignore,8\4\84bf24e05a8e483c2e81f1266cd4daa66e06ece9
