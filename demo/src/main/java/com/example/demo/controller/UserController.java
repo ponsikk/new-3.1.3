@@ -22,7 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/{id}")  // Замапил
+    @GetMapping("/{id}")
     public String showUser(Model model, Long id) {
         model.addAttribute("user", userService.getUserById(id));
         return "user/user";

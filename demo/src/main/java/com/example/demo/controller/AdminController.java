@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 import com.example.demo.model.User;
+import com.example.demo.service.RoleService;
 import com.example.demo.service.RoleServiceImp;
+import com.example.demo.service.UserService;
 import com.example.demo.service.UserServiceImp;
 
 import com.example.demo.util.UserValidator;
@@ -13,9 +15,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private final UserServiceImp userService;
+    private final UserService userService;
     private final UserValidator userValidator;
-    private final RoleServiceImp roleService;
+    private final RoleService roleService;
 
     @Autowired
     public AdminController(UserServiceImp userService, UserValidator userValidator, RoleServiceImp roleService) {
@@ -60,7 +62,7 @@ public class AdminController {
 
     @PatchMapping("/{id}")
     public String updateUser(@RequestBody User user, @RequestParam Long id){
-        userService.updateUser(id,user);
+        userService.updateUser(id, user);
         return "redirect:/admin";
     }
 
